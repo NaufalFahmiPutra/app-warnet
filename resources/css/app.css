@@ -4,9 +4,82 @@
 @source '../../storage/framework/views/*.php';
 @source "../**/*.blade.php";
 @source "../**/*.js";
-@source "../**/*.vue";
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', Consolas, ui-monospace, monospace;
+
+    --color-paper: #F2F3EE;
+    --color-paper-outer: #E4E6E0;
+    --color-surface: #FFFFFF;
+    --color-surface-alt: #F7F8F4;
+    --color-acid-lime: #E2F855;
+    --color-obsidian: #161715;
+    --color-obsidian-soft: #222420;
+    --color-ink: #161715;
+    --color-ink-muted: #5A5E56;
+    --color-mint-soft: #E8FCD0;
+    --color-mint-ink: #1D5E13;
+    --color-amber-soft: #FFE8C2;
+    --color-amber-ink: #8A4500;
+    --color-coral-soft: #FFE2E2;
+    --color-coral-ink: #A61C1C;
+}
+
+@layer components {
+    .bento-card {
+        border: 1.5px solid #161715;
+        box-shadow: 0 5px 0 #161715;
+    }
+
+    .bento-card-sm {
+        border: 1.5px solid #161715;
+        box-shadow: 0 3px 0 #161715;
+    }
+
+    .bento-btn {
+        border: 1.5px solid #161715;
+        box-shadow: 0 3px 0 #161715;
+        transition: transform 100ms ease, box-shadow 100ms ease, background-color 150ms ease;
+    }
+
+    .bento-btn:hover:not(:disabled) {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 0 #161715;
+    }
+
+    .bento-btn:active:not(:disabled) {
+        transform: translateY(2px);
+        box-shadow: 0 1px 0 #161715;
+    }
+
+    .bento-btn:disabled,
+    .bento-btn-disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+        box-shadow: 0 2px 0 #161715;
+        transform: none;
+    }
+
+    .bento-input {
+        border: 1.5px solid #161715;
+        background-color: #FFFFFF;
+        transition: box-shadow 150ms ease, border-color 150ms ease;
+    }
+
+    .bento-input:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px #E2F855;
+    }
+
+    .bento-input-error {
+        border: 1.5px solid #A61C1C;
+        background-color: #FFF7F7;
+    }
+
+    .bento-input-error:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px #FFE2E2;
+    }
 }

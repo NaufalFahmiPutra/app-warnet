@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Member extends Model
 {
     protected $fillable = [
-        'nama', 'no_telp', 'saldo',
+        'nama', 'no_hp', 'saldo',
     ];
 
     public function rentalSessions(){
