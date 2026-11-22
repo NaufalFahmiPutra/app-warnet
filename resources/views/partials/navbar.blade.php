@@ -11,7 +11,7 @@
         ['label' => 'Member', 'route' => 'members.index', 'match' => 'members.*', 'adminOnly' => false],
         ['label' => 'Jenis PC', 'route' => 'computer-types.index', 'match' => 'computer-types.*', 'adminOnly' => true],
         ['label' => 'Komputer', 'route' => 'computers.index', 'match' => 'computers.*', 'adminOnly' => true],
-        ['label' => 'Operator', 'route' => 'operators.index', 'match' => 'operators.*', 'adminOnly' => true],
+        ['label' => 'Petugas', 'route' => 'operators.index', 'match' => 'operators.*', 'adminOnly' => true],
         ['label' => 'Laporan', 'route' => 'reports.index', 'match' => 'reports.*', 'adminOnly' => true],
     ];
 @endphp

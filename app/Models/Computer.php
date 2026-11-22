@@ -13,4 +13,8 @@ class Computer extends Model
     public function computerType(){
         return $this->belongsTo(ComputerType::class);
     }
+
+    public function rentalSessions(){
+        return $this->hasMany(RentalSession::class);
+    }
 }
