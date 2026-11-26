@@ -12,7 +12,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-screen bg-paper font-sans text-ink antialiased selection:bg-acid-lime selection:text-ink">
+<body class="flex min-h-screen flex-col bg-paper font-sans text-ink antialiased selection:bg-acid-lime selection:text-ink">
     {{-- Header Top Strip --}}
     <header class="border-b-[1.5px] border-obsidian bg-surface">
         <div class="mx-auto flex h-20.5 w-full max-w-360 items-center justify-between px-4 sm:px-8 lg:px-16">
@@ -32,84 +32,11 @@
         </div>
     </header>
 
-    {{-- Konten Utama 2 Kolom --}}
-    <main class="mx-auto w-full max-w-360 px-4 py-8 sm:px-8 lg:px-16 lg:py-12">
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-[580px_1fr] lg:items-stretch">
-
-            {{-- KOLOM KIRI: Hero Acid-Lime + Kartu Peran Obsidian --}}
-            <div class="flex flex-col gap-6">
-                <section class="bento-card rounded-3xl bg-acid-lime p-7 sm:p-8">
-                    <span class="inline-flex rounded-full bg-obsidian px-4 py-1.5 font-mono text-[11px] font-bold tracking-wide text-acid-lime">
-                        SISTEM MANAJEMEN WARNET
-                    </span>
-
-                    <h1 class="mt-5 font-display text-3xl font-bold leading-tight tracking-tight text-ink sm:text-[34px]">
-                        Pantau PC, Catat Sesi,<br>&amp; Hitung Biaya Otomatis.
-                    </h1>
-
-                    <p class="mt-4 text-[13px] leading-relaxed text-ink/85">
-                        Menggantikan pencatatan manual dengan perhitungan tarif presisi, pemantauan status unit PC langsung, dan transaksi saldo member yang aman.
-                    </p>
-
-                    <hr class="my-6 border-obsidian/20">
-
-                    <ul class="space-y-3 text-[13px] font-semibold text-ink">
-                        <li class="flex items-center gap-3">
-                            <span class="h-2 w-2 shrink-0 rounded-full bg-obsidian"></span>
-                            <span>Sewa PC otomatis ubah status Tersedia &harr; Dipakai</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="h-2 w-2 shrink-0 rounded-full bg-obsidian"></span>
-                            <span>Potong saldo member atau catat tunai pelanggan umum</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="h-2 w-2 shrink-0 rounded-full bg-obsidian"></span>
-                            <span>Pencatatan transaksi selesai &amp; top-up saldo tersimpan rapi</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="h-2 w-2 shrink-0 rounded-full bg-obsidian"></span>
-                            <span>Laporan pendapatan per rentang tanggal khusus Admin</span>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="bento-card flex-1 rounded-3xl bg-obsidian p-7 text-surface sm:p-8">
-                    <h2 class="font-display text-lg font-bold text-surface">Akses Pengelola &amp; Kasir</h2>
-
-                    <div class="mt-5 space-y-3.5">
-                        <div class="rounded-2xl border border-acid-lime/35 bg-obsidian-soft p-4">
-                            <div class="flex items-center gap-3">
-                                <span class="rounded-full bg-acid-lime px-3 py-0.5 font-mono text-[11px] font-bold text-ink">
-                                    ADMIN
-                                </span>
-                                <span class="text-[13px] font-bold text-surface">Pemilik / Pengelola Warnet</span>
-                            </div>
-                            <p class="mt-2.5 text-xs leading-relaxed text-surface/75">
-                                Akses penuh: Dashboard, Sewa PC, Top-Up, Master PC, Member, Operator &amp; Laporan.
-                            </p>
-                        </div>
-
-                        <div class="rounded-2xl border border-surface/15 bg-obsidian-soft p-4">
-                            <div class="flex items-center gap-3">
-                                <span class="rounded-full bg-surface px-3 py-0.5 font-mono text-[11px] font-bold text-ink">
-                                    OPERATOR
-                                </span>
-                                <span class="text-[13px] font-bold text-surface">Penjaga Kasir Harian</span>
-                            </div>
-                            <p class="mt-2.5 text-xs leading-relaxed text-surface/75">
-                                Kelola Sewa PC (mulai/selesai), Top-Up saldo, serta Lihat/Tambah/Edit Member.
-                            </p>
-                        </div>
-                    </div>
-
-                    <p class="mt-5 text-xs font-medium text-acid-lime">
-                        Khusus petugas warnet. Akun operator baru dibuat dan dikelola oleh Admin.
-                    </p>
-                </section>
-            </div>
-
-            {{-- KOLOM KANAN: Form Login --}}
-            <section class="bento-card flex flex-col justify-between rounded-3xl bg-surface p-7 sm:p-11">
+    {{-- Konten Utama --}}
+    <main class="flex flex-1 items-center justify-center px-4 py-8 sm:px-8 lg:py-12">
+        <div class="w-full max-w-xl">
+            {{-- Form Login --}}
+            <section class="bento-card flex flex-col justify-between rounded-3xl bg-surface p-7 sm:p-10">
                 <div>
                     <span class="inline-flex rounded-full border-[1.5px] border-obsidian bg-paper px-4 py-1.5 font-mono text-[11px] font-bold tracking-wide text-ink">
                         MASUK SISTEM KASIR
@@ -119,7 +46,7 @@
                         Masuk ke WARNET.OS
                     </h2>
                     <p class="mt-2 text-sm text-ink-muted">
-                        Masukkan email dan kata sandi yang terdaftar oleh Admin warnet.
+                        Masukkan email dan kata sandi yang terdaftar.
                     </p>
 
                     {{-- Notifikasi Sukses (mis. setelah keluar) --}}
@@ -215,7 +142,7 @@
                                        value="1"
                                        {{ old('remember') ? 'checked' : '' }}
                                        class="h-5 w-5 cursor-pointer rounded-md border-[1.5px] border-obsidian accent-obsidian">
-                                <span>Ingat sesi login di perangkat kasir ini</span>
+                                <span>Ingat sesi login pada perangkat ini</span>
                             </label>
                         </div>
 
